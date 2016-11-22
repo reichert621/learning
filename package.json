@@ -1,0 +1,17 @@
+{
+  "name": "learning",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reichert621/learning.git"
+  },
+  "keywords": [
+    "learning"
+  ],
+  "author": "reichert621",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reichert621/learning/issues"
+  },
+  "homepage": "https://github.com/reichert621/learning#readme"
+}
