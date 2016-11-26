@@ -10,8 +10,8 @@ Implementation of a few algorithms in JavaScript
 - [ ] Depth-first search (DFS)
 - [ ] Dijkstra's algorithm
 - [ ] Knuth–Morris–Pratt algorithm
-- [ ] Bubble sort
-- [ ] Merge sort
+- [x] Bubble sort
+- [x] Merge sort
 - [ ] Quick sort
-- [ ] Insertion sort
+- [x] Insertion sort
 - [ ] Bucket sort

@@ -17,7 +17,6 @@ module.exports = function bubblesort(arr) {
   return arr;
 }
 
-// Mutates array, swapping index i and j
 function swap(arr, i, j) {
   let tmp = arr[i];
 
