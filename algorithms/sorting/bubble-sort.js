@@ -1,8 +1,21 @@
 /**
+ * Utility to swap two elements of an array
+ */
+const swap = (arr, i, j) => {
+  let tmp = arr[i];
+
+  arr[i] = arr[j];
+  arr[j] = tmp;
+
+  return arr;
+};
+
+/**
  * Bubble sort
  * Complexity: O(n^2)
+ * @param  {Array} arr - array to sort
+ * @return {Array} sorted array
  */
-
 module.exports = function bubblesort(arr) {
   let len = arr.length;
 
@@ -13,15 +26,6 @@ module.exports = function bubblesort(arr) {
       }
     }
   }
-
-  return arr;
-}
-
-function swap(arr, i, j) {
-  let tmp = arr[i];
-
-  arr[i] = arr[j];
-  arr[j] = tmp;
 
   return arr;
 }

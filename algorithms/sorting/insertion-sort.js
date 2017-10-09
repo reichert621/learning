@@ -1,8 +1,9 @@
 /**
  * Insertion sort
  * Complexity: O(n^2)
+ * @param  {Array} arr - array to sort
+ * @return {Array} sorted array
  */
-
 module.exports = function insertionsort(arr) {
   const len = arr.length;
 
