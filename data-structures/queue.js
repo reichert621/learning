@@ -8,9 +8,9 @@ module.exports = class Queue {
    * @constructor
    */
   constructor() {
-    this.oldest = 1;
-    this.latest = 1;
-    this.storage = {};
+    this._oldest = 1;
+    this._latest = 1;
+    this._storage = {};
   }
 
   /**
@@ -18,7 +18,7 @@ module.exports = class Queue {
    * @return {Number} size
    */
   size() {
-    return this.latest - this.oldest;
+    return this._latest - this._oldest;
   }
 
   /**
@@ -27,8 +27,8 @@ module.exports = class Queue {
    * @return {Queue} this
    */
   enqueue(data) {
-    this.storage[this.latest] = data;
-    this.latest += 1;
+    this._storage[this._latest] = data;
+    this._latest += 1;
 
     return this;
   }
@@ -38,11 +38,11 @@ module.exports = class Queue {
    * @return {Any} the dequeued data
    */
   dequeue() {
-    if (this.oldest === this.latest) return undefined;
+    if (this._oldest === this._latest) return undefined;
 
-    const data = this.storage[this.oldest];
-    delete this.storage[this.oldest];
-    this.oldest += 1;
+    const data = this._storage[this._oldest];
+    delete this._storage[this._oldest];
+    this._oldest += 1;
 
     return data;
   }
