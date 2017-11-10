@@ -26,6 +26,9 @@ const findKthToLast = (list, k) => {
   let kth = list.head;
   let runner = kth;
 
+  // Assumes k == 1 means we get the last element, hence `(k - 1)` here.
+  // If we decided that k == 1 got the "second-to-last" element instead
+  // (i.e. "1 before the last element"), we would just use `k` here.
   for (let i = 0; i < (k - 1); i++) {
     if (runner.next) {
       runner = runner.next;
