@@ -16,7 +16,7 @@
  *
  * @param  {LinkedList} list - the linked list to search
  * @param  {Number} k - the offset from the last element
- * @return {Node.data} the data stored at the kth to last element
+ * @return {Any} the data stored at the kth to last element
  */
 const findKthToLast = (list, k) => {
   if (!list || !list.head || !k || k < 1) {
