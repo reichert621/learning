@@ -86,6 +86,20 @@ module.exports = class LinkedList {
     return false;
   }
 
+  getNode(n) {
+    let current = this.head;
+
+    for (let i = 0; i < n; i++) {
+      if (current.next) {
+        current = current.next;
+      } else {
+        throw new Error(`No node exists at input ${n}`)
+      }
+    }
+
+    return current;
+  }
+
   /**
    * Get the head node of the linked list
    * @return {Node} head
