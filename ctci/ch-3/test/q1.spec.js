@@ -87,7 +87,6 @@ describe('q1', () => {
 
       assert.equal(s.peek(2), ':)');
       assert.equal(s.size(2), 2);
-
     });
   });
 });

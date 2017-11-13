@@ -1,4 +1,6 @@
 /**
+ * Chapter 3 - Question 3
+ *
  * Stack of Plates: Imagine a (literal) stack of plates. If the stack gets
  * too high, it might topple. Therefore, in real life, we would likely start
  * a new stack when the previous stack exceeds some threshold. Implement a
