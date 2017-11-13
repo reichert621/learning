@@ -44,7 +44,7 @@ class StackMin {
     }
 
     const index = this._size;
-    const min = this._min[index - 1] || Infinity;
+    const min = index > 0 ? this._min[index - 1] : Infinity;
 
     this._storage[index] = n;
     this._min[index] = n < min ? n : min;

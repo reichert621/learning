@@ -54,10 +54,10 @@ describe('q2', () => {
       assert.equal(s.min(), 2);
       s.push(5);
       assert.equal(s.min(), 2);
-      s.push(1);
-      assert.equal(s.min(), 1);
+      s.push(0);
+      assert.equal(s.min(), 0);
       s.push(7);
-      assert.equal(s.min(), 1);
+      assert.equal(s.min(), 0);
       s.push(-3);
       assert.equal(s.min(), -3);
     });
