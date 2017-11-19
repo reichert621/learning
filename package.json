@@ -14,9 +14,12 @@
     "url": "https://github.com/reichert621/learning/issues"
   },
   "homepage": "https://github.com/reichert621/learning#readme",
+  "scripts": {
+    "test": "mocha **/*.spec.js"
+  },
   "devDependencies": {
-    "chai": "^3.5.0",
+    "chai": "^4.1.2",
     "lodash": "^4.17.2",
-    "mocha": "^3.2.0"
+    "mocha": "^4.0.1"
   }
 }
