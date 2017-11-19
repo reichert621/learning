@@ -69,6 +69,7 @@ module.exports = class Graph {
    * Add an edge to the graph connecting two vertices
    * @param {String} n1 - the first node
    * @param {String} n2 - the second node
+   * @return {Graph} this
    */
   addEdge(n1, n2) {
     this.graph[n1] = (this.graph[n1] || new Set()).add(n2);
@@ -92,6 +93,7 @@ module.exports = class Graph {
    * Determine if two nodes are connecting using breadth-first search
    * @param {String} start - the starting node
    * @param {String} target - the target node
+   * @return {Boolean} if a path is found
    */
   bfs(start, target) {
     if (start === target) return true;
@@ -122,6 +124,7 @@ module.exports = class Graph {
    * @param {String} current - the current node
    * @param {String} target - the target node
    * @param {Set} visited - the set of previously visited nodes
+   * @return {Boolean} if a path is found
    */
   _dfs(current, target, visited = new Set()) {
     if (current === target) return true;
@@ -143,6 +146,7 @@ module.exports = class Graph {
    * Determine if two nodes are connecting using depth-first search
    * @param {String} start - the starting node
    * @param {String} target - the target node
+   * @return {Boolean} if a path is found
    */
   dfs(start, target) {
     return this._dfs(start, target);
