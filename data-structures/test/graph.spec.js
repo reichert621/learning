@@ -3,6 +3,52 @@ const { assert } = require('chai');
 const { flow } = require('lodash');
 
 describe('Graph', () => {
+  describe('vertices', () => {
+    it('gets the vertices of the graph', () => {
+      const nodes = ['a', 'b', 'c', 'd'];
+      const graph = new Graph().addVertices(nodes);
+
+      assert.deepEqual(graph.vertices(), nodes);
+    });
+
+    it('returns an empty array if no vertices exist', () => {
+      const graph = new Graph();
+
+      assert.deepEqual(graph.vertices(), []);
+    });
+  });
+
+  describe('edges', () => {
+    it('gets the edges of the graph', () => {
+      const nodes = ['a', 'b', 'c', 'd'];
+      const edges = [['a', 'b'], ['b', 'c'], ['c', 'd']];
+      const graph = new Graph()
+        .addVertices(nodes)
+        .addEdges(edges);
+
+      assert.deepEqual(graph.edges(), edges);
+    });
+
+    it('gets the edges of the graph when added one at a time', () => {
+      const nodes = ['a', 'b', 'c', 'd'];
+      const graph = new Graph()
+        .addVertices(nodes)
+        .addEdge('a', 'b')
+        .addEdge('b', 'c')
+        .addEdge('c', 'd');
+
+      const expected = [['a', 'b'], ['b', 'c'], ['c', 'd']];
+
+      assert.deepEqual(graph.edges(), expected);
+    });
+
+    it('returns an empty array if no edges exist', () => {
+      const graph = new Graph();
+
+      assert.deepEqual(graph.edges(), []);
+    });
+  });
+
   describe('bfs', () => {
     it('searches a graph where all nodes are connected', () => {
       const nodes = ['a', 'b', 'c', 'd'];
