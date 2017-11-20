@@ -1,6 +1,5 @@
 const Graph = require('../graph');
 const { assert } = require('chai');
-const { flow } = require('lodash');
 
 describe('Graph', () => {
   describe('vertices', () => {
